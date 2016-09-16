@@ -12,13 +12,23 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var coolLabel: UILabel!
     
+    
+    
+    @IBOutlet weak var text1: UITextField!
+    
+    
+    @IBOutlet weak var text2: UITextField!
+    
+    
+    @IBOutlet weak var sumLabel: UILabel!
+    
     var tapCount = 0
     
     @IBAction func buttonTapped(_ sender: AnyObject) {
         
         tapCount += 1
         
-        
+        // Can only tap button 5 times!!
         if tapCount <= 5 {
             self.view.backgroundColor = UIColor.red
             coolLabel.text = "You pushed the button \(tapCount) time(s)!!"
@@ -29,6 +39,8 @@ class ViewController: UIViewController {
             tapCount = 0
         }
         
+        let answer = Int(text1.text!)! + Int(text2.text!)!
+        sumLabel.text = "ANSWER: \(answer)"
         
         
     }
