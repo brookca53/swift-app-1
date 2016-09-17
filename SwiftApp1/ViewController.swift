@@ -51,6 +51,22 @@ class ViewController: UIViewController {
         coolLabel.text = "Buttons are cool!!"
         print("Cool button tapped")
         
+        
+        let addition :Bool = false
+        var answer = 0
+        
+        if addition {
+            answer = Int(text1.text!)! + Int(text2.text!)!
+            sumLabel.text = "ANSWER: \(answer)"
+        } else {
+            answer = Int(text1.text!)! - Int(text2.text!)!
+            sumLabel.text = "ANSWER: \(answer)"
+        }
+        
+        
+        
+        
+        
     }
     
     override func viewDidLoad() {
